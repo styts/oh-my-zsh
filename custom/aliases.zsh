@@ -12,9 +12,9 @@ alias h='history'
 alias ip='ipython'
 alias ipn="ipython notebook --pprint --pylab inline"
 alias ks=ls
-alias la='ls -la --color'
-alias ll='ls -lG --color'
-alias ls='ls -G --color'
+alias la='ls -la'
+alias ll='ls -lG'
+alias ls='ls -G'
 alias lls='ls'
 alias mkae='make'
 alias o='open'
@@ -25,6 +25,7 @@ alias pyclean='find . -name "*.pyc" -delete ; find . -name __pycache__ -exec rm 
 alias pyhton='python'
 alias sl=ls
 alias v='vim'
+alias vm="cd && cd vmstuff && vagrant up && vagrant ssh"
 alias wo='workon'
 
 # functions :) TODO put these in another file later
