@@ -8,6 +8,7 @@ alias e2='workon exam2 && cd exam2'
 alias fab='nocorrect fab'
 alias ffind='nocorrect ffind'
 alias gs='gst'
+alias h='history'
 alias ip='ipython'
 alias ipn="ipython notebook --pprint --pylab inline"
 alias ks=ls
