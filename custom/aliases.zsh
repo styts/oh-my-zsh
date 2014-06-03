@@ -25,5 +25,6 @@ alias pyclean='find . -name "*.pyc" -delete ; find . -name __pycache__ -exec rm 
 alias pyhton='python'
 alias sl=ls
 alias v='vim'
-alias vm="cd ~/vagrant/cms && vagrant up && vagrant ssh"
+alias vmcms="tab-color 0 150 0; cd ~/vagrant/cms && vagrant up && vagrant ssh"
+alias vmoerp="tab-color 200 0 100; cd ~/vagrant/openerp-debian && vagrant up && vagrant ssh"
 alias wo='workon'
