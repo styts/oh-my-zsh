@@ -25,8 +25,5 @@ alias pyclean='find . -name "*.pyc" -delete ; find . -name __pycache__ -exec rm 
 alias pyhton='python'
 alias sl=ls
 alias v='vim'
-alias vm="cd && cd vmstuff && vagrant up && vagrant ssh"
+alias vm="cd ~/vagrant/cms && vagrant up && vagrant ssh"
 alias wo='workon'
-
-# functions :) TODO put these in another file later
-th() { wn $* -over; }  # thesaurus using WordNet
