@@ -24,7 +24,6 @@ alias mkae='make'
 alias o='open'
 alias oepn='open'
 alias p='python'
-alias pass='apg -m 20 -x 30 -n 1 | pbcopy'  # random password
 alias pyclean='find . -name "*.pyc" -delete ; find . -name __pycache__ -exec rm -rf {} \; '
 alias pyhton='python'
 alias sl=ls
