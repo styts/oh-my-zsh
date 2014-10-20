@@ -29,3 +29,9 @@ alias pyhton='python'
 alias sl=ls
 alias v='vim'
 alias wo='workon'
+
+#  this causes strange hang-ups
+# git stash list improvement. scroll through stashes with 'q'
+#gst() {
+    #git stash list | awk -F: '{ print "\n\n\n\n"; print $0; print "\n\n"; system("git stash show -p " $1); }'
+#}
