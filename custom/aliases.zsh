@@ -26,6 +26,7 @@ alias oepn='open'
 alias p='python'
 alias pyclean='find . -name "*.pyc" -delete ; find . -name __pycache__ -exec rm -rf {} \; '
 alias pyhton='python'
+alias s='sag'
 alias sl=ls
 alias v='vim'
 alias wo='workon'
@@ -35,3 +36,8 @@ alias wo='workon'
 #gst() {
     #git stash list | awk -F: '{ print "\n\n\n\n"; print $0; print "\n\n"; system("git stash show -p " $1); }'
 #}
+cdpy () {
+  cd "$(python -c "import os.path as _, ${1}; \
+          print _.dirname(_.realpath(${1}.__file__[:-1]))"
+        )"
+}
