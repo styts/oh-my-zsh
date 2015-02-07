@@ -30,6 +30,7 @@ alias s='sag'
 alias sl=ls
 alias v='vim'
 alias wo='workon'
+alias t=`which todo.sh` -d ~/.todo.cfg
 
 #  this causes strange hang-ups
 # git stash list improvement. scroll through stashes with 'q'
