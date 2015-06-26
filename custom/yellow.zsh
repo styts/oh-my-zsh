@@ -7,5 +7,5 @@ if [ "$HOST" = "kspro.local" ]; then
 fi
 
 if [ "$HOST" = "debian" ]; then
-    alias y="deactivate ; mux start yelster"
+    alias y="mux start yelster"
 fi

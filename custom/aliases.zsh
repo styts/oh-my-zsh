@@ -4,9 +4,10 @@ alias cdp='cdproject'
 alias df='df -h'
 alias ds='ds -sh'
 alias du='du -h'
-alias e2='workon exam2 && cd exam2'
+alias f='ffind'
 alias fab='nocorrect fab'
 alias ffind='nocorrect ffind'
+alias ff='ffind'
 alias g='grep'
 alias gs='git status'
 alias ga='git add'
@@ -14,6 +15,8 @@ alias gaa='git add -A'
 alias gcv='git commit -v'
 alias gba='git branch -a'
 alias h='history'
+alias hpg='history | egrep'
+alias hpt='history | tail'
 alias ip='ipython'
 alias ipn="ipython notebook --pprint --pylab inline"
 alias ks=ls
@@ -30,14 +33,23 @@ alias pyclean='find . -name "*.pyc" -delete ; find . -name __pycache__ -exec rm 
 alias pyhton='python'
 alias s='sag'
 alias sl=ls
+alias sz='source ~/.zshrc && cd $PWD'
 alias v='vim'
+alias va='vim ~/.oh-my-zsh/custom/aliases.zsh'
+alias vz='vim ~/.zshrc'
 alias wo='workon'
+alias zs='sz'
 
-#  this causes strange hang-ups
-# git stash list improvement. scroll through stashes with 'q'
-#gst() {
-    #git stash list | awk -F: '{ print "\n\n\n\n"; print $0; print "\n\n"; system("git stash show -p " $1); }'
-#}
+# GLOBAL aliases
+alias -g G='| egrep'
+
+# git stash list, navigate with `Q`
+gstl () {
+    git stash list | awk -F: '{
+        system("git -c color.ui=always stash show -p " $1); }'
+}
+
+# cd to python package source
 cdpy () {
   cd "$(python -c "import os.path as _, ${1}; \
           print _.dirname(_.realpath(${1}.__file__[:-1]))"
