@@ -57,3 +57,4 @@ cdpy () {
           print _.dirname(_.realpath(${1}.__file__[:-1]))"
         )"
 }
+alias git_undo_merge='git reset --merge ORIG_HEAD'
