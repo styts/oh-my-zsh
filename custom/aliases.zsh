@@ -1,17 +1,22 @@
 alias a="vim ~/.oh-my-zsh/custom/aliases.zsh"
+alias -g B='| pbcopy'
 alias b='pbcopy'
 alias cdp='cdproject'
 alias df='df -h'
 alias ds='ds -sh'
 alias du='du -h'
+alias find='sudo find'
 alias f='ffind'
 alias fab='nocorrect fab'
 alias ffind='nocorrect ffind'
 alias g='grep'
+alias -g G='| egrep'
 alias -g GPG='EAE40466'
 alias gs='git status'
 alias ga='git add'
+alias gd='git diff'
 alias gaa='git add -A'
+alias gca='git commit -a'
 alias gcv='git commit -v'
 alias gba='git branch -a'
 alias -g H='--help'
@@ -24,6 +29,7 @@ alias ls='ls -G --color'
 alias la='ls -la'
 alias ll='ls -lG'
 alias lls='ls'
+alias -g L='| less'
 alias mkae='make'
 alias mdkir='mkdir'
 alias o='open'
@@ -40,7 +46,6 @@ alias wo='workon'
 alias -g Z='~/.zshrc'
 
 # GLOBAL aliases
-alias -g G='| egrep'
 
 # git stash list, navigate with `Q`
 gstl () {
