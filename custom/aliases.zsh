@@ -1,6 +1,12 @@
 alias -g A='~/.oh-my-zsh/custom/aliases.zsh'
+alias -g B='| pbcopy'
+alias -g G='| grep -i'
+alias -g GPG='EAE40466'
+alias -g H='--help'
+alias -g L='| less'
+alias -g Z='~/.zshrc'
+alias a="vim ~/.oh-my-zsh/custom/aliases.zsh"
 alias b='pbcopy'
-alias c=clear
 alias cdp='cdproject'
 alias d='dirs -v | head -10 | tac'
 alias df='df -h'
@@ -9,38 +15,37 @@ alias du='du -h'
 alias f='ffind'
 alias fab='nocorrect fab'
 alias ffind='nocorrect ffind'
-alias ff='ffind'
+alias find='sudo find'
 alias g='grep'
-alias gs='git status'
 alias ga='git add'
 alias gaa='git add -A'
-alias gcv='git commit -v'
 alias gba='git branch -a'
-alias hpt='history | tail'
-alias -g G=' | grep -i'
+alias gca='git commit -a'
+alias gcv='git commit -v'
+alias gd='git diff'
+alias gl='git pull'
+alias gp='git push'
+alias gs='git status'
 alias ip='ipython'
 alias ipn="ipython notebook --pprint --pylab inline"
-alias ks=ls
-alias ls='ls -G --color'
+alias ks='ls'
 alias la='ls -la'
 alias ll='ls -lG'
 alias lls='ls'
-alias mkae='make'
+alias ls='ls -G --color'
 alias mdkir='mkdir'
+alias mkae='make'
 alias o='open'
 alias oepn='open'
-alias r='ranger'
 alias p='python'
-alias pyclean='find . -name "*.pyc" -delete ; find . -name __pycache__ -exec rm -rf {} \; '
 alias pyhton='python'
+alias r='ranger'
 alias s='sag'
-alias sl=ls
-alias sz='source ~/.zshrc && cd $PWD'
-alias t=`which todo.sh` -d ~/.todo.cfg
+alias sl='ls'
+alias t='$(which todo.sh) -d ~/.todo.cfg'
 alias v='vim'
+alias vim='nvim'
 alias wo='workon'
-alias zs='sz'
-alias -g Z='~/.zshrc'
 
 # git stash list, navigate with `Q`
 gstl () {
@@ -81,3 +86,5 @@ light () {
     echo -e "\033]50;SetProfile=Default\a"
     unset DARK
 }
+
+alias git_undo_merge='git reset --merge ORIG_HEAD'
