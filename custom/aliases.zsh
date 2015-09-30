@@ -31,6 +31,7 @@ alias gd='git diff'
 alias gl='git pull'
 alias gp='git push'
 alias gs='git status'
+alias gstp='git stash pop'
 alias ip='ipython'
 alias ipn="ipython notebook --pprint --pylab inline"
 alias ks='ls'
