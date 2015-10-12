@@ -13,8 +13,9 @@ todo_count(){
     echo ""
   fi
 }
-function zle-line-init zle-keymap-select {
-RPS1="$(todo_count)"
-    RPS2=$RPS1
-    zle reset-prompt
-}
+# this makes the shell very slow, disable it
+#function zle-line-init zle-keymap-select {
+#RPS1="$(todo_count)"
+    #RPS2=$RPS1
+    #zle reset-prompt
+#}
