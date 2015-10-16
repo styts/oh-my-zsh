@@ -88,12 +88,14 @@ alias git_undo_merge=undo_merge
 dark () {
     echo -e "\033]50;SetProfile=Dark\a"
     export DARK=1
+    echo "dark" > ~/.colorscheme
 }
 
 # change profile dynamically
 light () {
     echo -e "\033]50;SetProfile=Default\a"
     unset DARK
+    echo "light" > ~/.colorscheme
 }
 
 alias git_undo_merge='git reset --merge ORIG_HEAD'
