@@ -99,3 +99,12 @@ light () {
 }
 
 alias git_undo_merge='git reset --merge ORIG_HEAD'
+
+src () {
+    # given a github url "<author>/<package>", clone and cd into ~/src
+    args=$@
+    name=$(echo $args | cut -d '/' -f 2)  # take the second half of argument
+    cd ~/src
+    git clone "git@github.com:$args.git"
+    cd $name
+}
