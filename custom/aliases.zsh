@@ -4,6 +4,7 @@ alias -g G='| grep -i'
 alias -g GPG='EAE40466'
 alias -g H='--help'
 alias -g L='| less'
+alias -g V='--version'
 alias -g Z='~/.zshrc'
 alias a="vim ~/.oh-my-zsh/custom/aliases.zsh"
 alias b='pbcopy'
