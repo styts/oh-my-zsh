@@ -36,7 +36,7 @@ alias grv='git remote --verbose'
 alias gs='git status'
 alias gstp='git stash pop'
 
-alias ip='ipython'
+alias ipy='ipython'
 alias ipn="ipython notebook --pprint --pylab inline"
 alias ks='ls'
 alias la='ls -la'
