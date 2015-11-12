@@ -54,7 +54,6 @@ alias s='sag'
 alias sl='ls'
 alias t='$(which todo.sh) -d ~/.todo.cfg'
 alias v='vim'
-alias vim='nvim'
 alias wo='workon'
 
 # git stash list, navigate with `Q`
