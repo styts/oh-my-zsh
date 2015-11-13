@@ -53,7 +53,6 @@ alias s='sag'
 alias sl='ls'
 alias t='$(which todo.sh) -d ~/.todo.cfg'
 alias v='vim'
-#alias vim='nvim'
 alias wo='workon'
 
 # git stash list, navigate with `Q`
@@ -107,4 +106,15 @@ src () {
     cd ~/src
     git clone "git@github.com:$args.git"
     cd $name
+}
+
+# shortcut for the vimwiki with colored tab
+wi () {
+    tab-color 255 100 200
+    vim ~/Personal/vimwiki/index.wiki
+}
+
+# paste something to the yelster pastebox
+ypaste () {
+    curl -u kstytsenko:$(pass yelster/ldap) -d private=1 --data-urlencode text@- https://paste2.yelsterdigital.com/api/create
 }
