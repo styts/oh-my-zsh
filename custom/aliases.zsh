@@ -16,7 +16,6 @@ alias du='du -h'
 alias f='ffind'
 alias fab='nocorrect fab'
 alias ffind='nocorrect ffind'
-alias find='sudo find'
 
 alias g='git'
 alias ga='git add'
@@ -54,7 +53,7 @@ alias s='sag'
 alias sl='ls'
 alias t='$(which todo.sh) -d ~/.todo.cfg'
 alias v='vim'
-alias vim='nvim'
+#alias vim='nvim'
 alias wo='workon'
 
 # git stash list, navigate with `Q`
