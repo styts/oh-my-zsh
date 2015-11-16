@@ -117,3 +117,9 @@ wi () {
 ypaste () {
     curl -u kstytsenko:$(pass yelster/ldap) -d private=1 --data-urlencode text@- https://paste2.yelsterdigital.com/api/create
 }
+
+colors-tmux () {
+    for i in {0..255} ; do
+        printf "\x1b[38;5;${i}mcolour${i}\n"
+    done
+}
