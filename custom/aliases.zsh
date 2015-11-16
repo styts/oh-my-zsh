@@ -16,7 +16,6 @@ alias du='du -h'
 alias f='ffind'
 alias fab='nocorrect fab'
 alias ffind='nocorrect ffind'
-alias find='sudo find'
 
 alias g='git'
 alias ga='git add'
@@ -109,11 +108,13 @@ src () {
     cd $name
 }
 
+# shortcut for the vimwiki with colored tab
 wi () {
     tab-color 255 100 200
     vim ~/Personal/vimwiki/index.wiki
 }
 
+# paste something to the yelster pastebox
 ypaste () {
     curl -u kstytsenko:$(pass yelster/ldap) -d private=1 --data-urlencode text@- https://paste2.yelsterdigital.com/api/create
 }
