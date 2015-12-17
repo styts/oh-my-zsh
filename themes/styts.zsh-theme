@@ -1,4 +1,4 @@
-if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="cyan"; fi
+if [ $USER = "kirill" ]; then NCOLOR="cyan"; else NCOLOR="red"; fi
 
 PROMPT='%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@%m:%{$fg[blue]%}%B%c/%b%{$reset_color%} $(git_prompt_info)'
 RPROMPT=''
