@@ -8,6 +8,7 @@ alias -g V='--version'
 alias -g Z='~/.zshrc'
 alias a="vim ~/.oh-my-zsh/custom/aliases.zsh"
 alias b='pbcopy'
+alias c='clear'
 alias cdp='cdproject'
 alias d='dirs -v | head -10 | tac'
 alias df='df -h'
