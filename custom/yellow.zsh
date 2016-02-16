@@ -23,6 +23,13 @@ if [ "$HOST" = "kspro.local" ]; then
         tab-color 200 100 200
         vim ~/Yelster/work.org/$(date "+%Y-%m").org
     }
+
+    # git branch new
+    function gnb () {
+        git checkout -b $@ integration
+        echo "Created branch $@ based on <integration>"
+    }
+    alias gbn=gnb
 fi
 
 # kspro is the host of the vagrant vm
