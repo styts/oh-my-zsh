@@ -30,6 +30,12 @@ if [ "$HOST" = "kspro.local" ]; then
         echo "Created branch $@ based on <integration>"
     }
     alias gbn=gnb
+
+    function migrate_sql () {
+        echo "set schema 'pagesjaunes';" | ./manage.py dbshell < $@
+    }
+
+    alias -g Y='~/.oh-my-zsh/custom/yellow.zsh'
 fi
 
 # kspro is the host of the vagrant vm
