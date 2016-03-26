@@ -58,6 +58,11 @@ alias ta='tmux at'
 alias v='vim'
 alias wo='workon'
 
+CALS='--calendar "Work" --calendar "Sport" --calendar "Social Events" --calendar "TODO" --calendar "Personal" --calendar "Birthdays"'
+alias week="gcalcli calw $CALS"
+alias month="gcalcli calm $CALS"
+alias event="gcalcli quick --calendar 'TODO' $@"
+
 # git stash list, navigate with `Q`
 gstl () {
     git stash list | awk -F: '{
