@@ -127,3 +127,10 @@ colors-tmux () {
         printf "\x1b[38;5;${i}mcolour${i}\n"
     done
 }
+
+# clip last: copy last command to clipboard
+cl () {
+    last_command=$(history | tail -n 1 | sed 's/[0-9]*  //')
+    echo $last_command | pbcopy
+    echo "$last_command copied to clipboard"
+}
