@@ -55,6 +55,7 @@ alias r='ranger'
 alias s='sag'
 alias sl='ls'
 alias t='$(which todo.sh) -d ~/.todo.cfg'
+alias ta='tmux at'
 alias v='vim'
 alias wo='workon'
 
