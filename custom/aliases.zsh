@@ -48,9 +48,11 @@ alias mkae='make'
 alias o='open'
 alias oepn='open'
 alias p='python'
+alias pst="pbpaste > "
 alias pyhton='python'
 alias pyhttp='python -m SimpleHTTPServer'
 alias r='ranger'
+alias re='source ~/.zshrc'
 alias s='sag'
 alias sl='ls'
 alias t='tmux'
@@ -100,7 +102,7 @@ dark () {
 
 # change profile dynamically
 light () {
-    echo -e "\033]50;SetProfile=Default\a"
+    echo -e "\033]50;SetProfile=Light\a"
     unset DARK
     echo "light" > ~/.colorscheme
 }
@@ -138,4 +140,9 @@ cl () {
     last_command=$(history | tail -n 1 | sed 's/[0-9]*  //')
     echo $last_command | pbcopy
     echo "$last_command copied to clipboard"
+}
+
+he () {
+    # `head` a file
+    head !$
 }
