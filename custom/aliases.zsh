@@ -121,7 +121,15 @@ src () {
 # shortcut for the vimwiki with colored tab
 wi () {
     tab-color 255 100 200
-    vim ~/Personal/vimwiki/index.wiki
+    cd ~/Personal/vimwiki
+    local filename=$1
+    if (( $# == 0 )) then
+        local filename=~/Personal/vimwiki/index.wiki
+    fi
+    $EDITOR $filename
+}
+di (){
+    wi ~/Personal/vimwiki/diary/$(date +'%Y-%m-%d').wiki
 }
 
 # paste something to the yelster pastebox
