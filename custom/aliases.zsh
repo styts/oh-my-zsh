@@ -57,7 +57,7 @@ alias s='sag'
 alias sl='ls'
 alias t='tmux'
 alias ta='tmux at'
-alias v='vim'
+alias v='nvim'
 alias wo='workon'
 
 CALS='--calendar "Work" --calendar "Sport" --calendar "Social Events" --calendar "TODO" --calendar "Personal" --calendar "Birthdays"'
@@ -78,7 +78,7 @@ cdpy () {
         )"
 }
 
-# history and hpg united
+# history and hpg (history pipe grep) united
 h () {
     if [[ $# -eq 0 ]] ; then
         history
