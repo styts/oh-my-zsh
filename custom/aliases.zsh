@@ -57,7 +57,7 @@ alias s='sag'
 alias sl='ls'
 alias t='tmux'
 alias ta='tmux at'
-alias v='nvim'
+alias v=$EDITOR
 alias wo='workon'
 
 CALS='--calendar "Work" --calendar "Sport" --calendar "Social Events" --calendar "TODO" --calendar "Personal" --calendar "Birthdays"'
@@ -110,8 +110,12 @@ light () {
 alias git_undo_merge='git reset --merge ORIG_HEAD'
 
 src () {
-    # given a github url "<author>/<package>", clone and cd into ~/src
+    # given a github url (full url or "<author>/<package>"), clone and cd into ~/src
     args=$@
+    # if it starts with the complete github url, trim till what remains is "<author>/<repo>"
+    if [[ $args =~ "^https:" ]]; then
+        args=$(echo "$args" | cut -c 20-)
+    fi
     name=$(echo $args | cut -d '/' -f 2)  # take the second half of argument
     cd ~/src
     git clone "git@github.com:$args.git"
