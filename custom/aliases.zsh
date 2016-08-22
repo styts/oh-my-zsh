@@ -25,9 +25,10 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gc='git commit -v'
 alias gca='git commit -va'
+alias gcm='git checkout master'
 alias gco='git checkout'
-alias gci='git checkout integration'
 alias gd='git diff'
+alias gdm='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 alias gf='git fetch'
 alias gfa='git fetch --all'
 alias gl='git pull'
@@ -36,6 +37,7 @@ alias grv='git remote --verbose'
 alias gs='git status'
 alias gstp='git stash pop'
 
+alias hpt='history | tail'
 alias ipy='ipython'
 alias ipn="ipython notebook --pprint --pylab inline"
 alias ks='ls'
@@ -43,6 +45,7 @@ alias la='ls -la'
 alias ll='ls -lG'
 alias lls='ls'
 alias ls='ls -G --color'
+alias lt='ls -lat'
 alias mdkir='mkdir'
 alias mkae='make'
 alias o='open'
@@ -157,4 +160,12 @@ cl () {
 he () {
     # `head` a file
     head !$
+}
+
+deploy () {
+    if [[ -f fabfile.py ]]; then
+        fab deploy
+    elif [[ -f package.json ]]; then
+        npm run deploy
+    fi
 }
