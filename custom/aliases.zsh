@@ -63,6 +63,7 @@ alias sl='ls'
 alias t='tmux'
 alias ta='tmux at'
 alias v=$EDITOR
+alias vim=$EDITOR
 alias wo='workon'
 
 CALS='--calendar "Work" --calendar "Sport" --calendar "Social Events" --calendar "TODO" --calendar "Personal" --calendar "Birthdays"'
@@ -169,5 +170,13 @@ deploy () {
         fab deploy
     elif [[ -f package.json ]]; then
         npm run deploy
+    fi
+}
+
+dev () {
+    if [[ -f manage.py ]]; then
+        ./manage.py runserver
+    elif [[ -f package.json ]]; then
+        npm run dev
     fi
 }
