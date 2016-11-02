@@ -48,6 +48,7 @@ alias lls='ls'
 alias ls='ls -G --color'
 alias lt='ls -lat'
 alias li='light'
+alias lh='ls -lh'
 alias mdkir='mkdir'
 alias mkae='make'
 alias o='open'
@@ -62,6 +63,7 @@ alias s='sag'
 alias sl='ls'
 alias t='tmux'
 alias ta='tmux at'
+alias tc='tab-color 190 190 190'
 alias v=$EDITOR
 alias vim=$EDITOR
 alias wo='workon'
@@ -175,8 +177,12 @@ deploy () {
 
 dev () {
     if [[ -f manage.py ]]; then
-        ./manage.py runserver
+        # django-green
+        tab-color 12 75 51
+        ./manage.py runserver; tc
     elif [[ -f package.json ]]; then
-        npm run dev
+        # javascript-yellow
+        tab-color 225 224 0
+        npm run dev; tc
     fi
 }
